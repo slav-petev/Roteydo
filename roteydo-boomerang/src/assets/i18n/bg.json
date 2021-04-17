@@ -1,0 +1,12 @@
+{
+    "COMMON": {
+        "NAVIGATION": {
+            "BRAND": "Ротейдо",
+            "HOME": "Начало",
+            "BOOMERANGING": "Бумерангинг",
+            "GALLERY": "Галерия",
+            "MODELS": "Модели",
+            "CONTACT": "Контакт"
+        }
+    }
+}
