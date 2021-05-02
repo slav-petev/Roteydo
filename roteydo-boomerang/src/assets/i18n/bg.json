@@ -1,5 +1,6 @@
 {
     "COMMON": {
+        "PAGE_TITLE": "Ротейдо Бумеранг България",
         "NAVIGATION": {
             "BRAND": "Ротейдо",
             "HOME": "Начало",
@@ -7,6 +8,14 @@
             "GALLERY": "Галерия",
             "MODELS": "Модели",
             "CONTACT": "Контакт"
+        }
+    },
+    "MODELS": {
+        "TABLE_CAPTIONS": {
+            "SOURCE": "Снимка",
+            "NAME": "Име",
+            "DESCRIPTION": "Описание",
+            "PRICE": "Цена"
         }
     }
 }

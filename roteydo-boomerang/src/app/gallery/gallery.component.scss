@@ -1,0 +1,11 @@
+.gallery-images-container {
+    display: flex;
+    flex-flow: wrap;
+
+    .img-thumbnail {
+        max-width: 20%;
+        border: none;
+        cursor: pointer;
+        background: none;
+    }
+}

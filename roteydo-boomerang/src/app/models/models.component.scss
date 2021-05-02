@@ -1,0 +1,37 @@
+th {
+    &.mat-header-cell {
+        width: 400px;
+
+        &.model-image-column,
+        &.model-name-column {
+            width: 200px;
+        }
+    }
+}
+
+td {
+    &.mat-cell {
+        width: 400px;
+
+        &.model-image-column,
+        &.model-name-column {
+            width: 200px;
+        }
+    }
+}
+
+.model-price-column {
+    text-align: center;
+}
+
+.models-table {
+    width: 100%;
+}
+
+.model-image-column {
+    padding: 24px;
+}
+
+.model-image {
+    width: 50%;
+}

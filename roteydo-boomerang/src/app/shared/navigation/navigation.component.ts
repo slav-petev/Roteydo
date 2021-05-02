@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navigation',
@@ -9,15 +8,7 @@ import { Router } from '@angular/router';
 export class NavigationComponent {
   collapsed: boolean = true;
 
-  constructor(private router: Router) {
-
-  }
-
   toggleCollapsed(): void {
     this.collapsed = !this.collapsed;
-  }
-
-  navigate(path: string) {
-    this.router.navigate([path]);
   }
 }

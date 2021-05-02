@@ -1,5 +1,27 @@
 <section>
-    <ng-container *ngFor="let model of availableModels$ | async">
-        <p>{{ model.name }}</p>
-    </ng-container>
+    <table class="models-table" mat-table [dataSource]="availableModels$">
+        <ng-container matColumnDef="source">
+            <th class="model-image-column" mat-header-cell *matHeaderCellDef>{{ 'MODELS.TABLE_CAPTIONS.SOURCE' | translate }}</th>
+            <td class="model-image-column" mat-cell *matCellDef="let model">
+                <img class="model-image" [src]="model.source"/>
+            </td>
+        </ng-container>
+        <ng-container matColumnDef="name">
+            <th class="model-name-column" mat-header-cell *matHeaderCellDef>{{ 'MODELS.TABLE_CAPTIONS.NAME' | translate }}</th>
+            <td class="model-name-column" mat-cell *matCellDef="let model">{{ model.name }}</td>
+        </ng-container>
+        <ng-container matColumnDef="description">
+            <th mat-header-cell *matHeaderCellDef>{{ 'MODELS.TABLE_CAPTIONS.DESCRIPTION' | translate }}</th>
+            <td mat-cell *matCellDef="let model">
+                <span>{{ model.description }}</span>
+            </td>
+        </ng-container>
+        <ng-container matColumnDef="price">
+            <th class="model-price-column" mat-header-cell *matHeaderCellDef>{{ 'MODELS.TABLE_CAPTIONS.PRICE' | translate }}</th>
+            <td class="model-price-column" mat-cell *matCellDef="let model">{{ model.price | currency:'BGN' }}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
 </section>

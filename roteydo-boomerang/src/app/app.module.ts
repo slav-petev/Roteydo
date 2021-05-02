@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
@@ -10,8 +9,11 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { SharedModule } from './shared/shared.module';
-import { ModelsComponent } from './models/models.component';
 import { ModelsModule } from './models/models.module';
+import localeBG from '@angular/common/locales/bg';
+import { registerLocaleData } from '@angular/common';
+
+registerLocaleData(localeBG);
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -40,7 +42,11 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppComponent
   ],
   providers: [
-    HttpClient
+    HttpClient,
+    {
+      provide: LOCALE_ID,
+      useValue: 'bg'
+    }
   ],
   bootstrap: [AppComponent]
 })
