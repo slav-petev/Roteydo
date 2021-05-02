@@ -1,22 +1,23 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">{{ 'COMMON.NAVIGATION.BRAND' | translate }}</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand">{{ 'COMMON.NAVIGATION.BRAND' | translate }}</a>
+        <button class="navbar-toggler" type="button"
+            aria-controls="navbarNavAltMarkup" aria-label="Toggle navigation"
+            [attr.aria-expanded]="!collapsed" (click)="toggleCollapsed()">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div id="navbarNavAltMarkup" class="collapse navbar-collapse">
             <div class="navbar-nav">
-                <a class="nav-link">
+                <a class="nav-link" (click)="navigate('/home')">
                     {{ 'COMMON.NAVIGATION.HOME' | translate }}
                 </a>
-                <a class="nav-link">
+                <a class="nav-link" (click)="navigate('/boomeranging')">
                     {{ 'COMMON.NAVIGATION.BOOMERANGING' | translate }}
                 </a>
-                <a class="nav-link">
+                <a class="nav-link" (click)="navigate('/gallery')">
                     {{ 'COMMON.NAVIGATION.GALLERY' | translate }}
                 </a>
-                <a class="nav-link">
+                <a class="nav-link" (click)="navigate('/models')">
                     {{ 'COMMON.NAVIGATION.MODELS' | translate }}
                 </a>
                 <a class="nav-link">

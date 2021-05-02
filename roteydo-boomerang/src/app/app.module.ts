@@ -10,6 +10,8 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { SharedModule } from './shared/shared.module';
+import { ModelsComponent } from './models/models.component';
+import { ModelsModule } from './models/models.module';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -31,6 +33,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       },
       defaultLanguage: 'bg'
     }),
+    ModelsModule,
     SharedModule
   ],
   declarations: [
